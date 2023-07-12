@@ -1,14 +1,12 @@
 Pod::Spec.new do |s|
     s.name              = 'MirrorflyWebrtc'
     s.version           = "1.1.1"
-    s.summary           = 'This repo to explore the cocopod and how to upload pod in public accessc'
+    s.summary           = 'This repo is to access WebRTC framework and methods'
     s.homepage          = 'https://github.com/MirrorFly/MirrorflyWebrtc'
-    s.author            = { 'Vishvanath' => 'vishvanatheshwer.v@contus.in','Vanitha' => 'vanitha.g@contus.in', }
+    s.author            = { 'Gowtham' => 'gowtham.a@contus.in','Vanitha' => 'vanitha.g@contus.in', }
     s.license      = { :type => 'Commercial', :file => 'LICENSE' }
     s.platform          = :ios, 12.1
     s.source            = { :git => 'https://github.com/MirrorFly/MirrorflyWebrtc.git', :tag => s.version.to_s }
-#    s.screenshots       = '','',''
-#    s.social_media_url = ''
     s.swift_version = '5.0'
     s.requires_arc = true
     s.ios.deployment_target = '12.1'
