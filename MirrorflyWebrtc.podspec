@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name              = 'MirrorflyWebrtc'
-    s.version           = "1.0"
+    s.version           = "1.1"
     s.summary           = 'This repo to explore the cocopod and how to upload pod in public accessc'
     s.homepage          = 'https://github.com/MirrorFly/MirrorflyWebrtc'
     s.author            = { 'Vishvanath' => 'vishvanatheshwer.v@contus.in','Vanitha' => 'vanitha.g@contus.in', }
