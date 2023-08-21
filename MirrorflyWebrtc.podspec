@@ -7,11 +7,11 @@ Pod::Spec.new do |s|
     s.license      = { :type => 'Commercial', :file => 'LICENSE' }
     s.platform          = :ios, 12.1
     s.source            = { :git => 'https://github.com/MirrorFly/MirrorflyWebrtc.git', :tag => s.version.to_s }
-    s.source_files  =  "SDK/WebRTC.xcframework"
+    s.source_files  =  "SDK/MirrorflyWebrtc.xcframework"
     s.swift_version = '5.0'
     s.requires_arc = true
     s.ios.deployment_target = '12.1'
-    s.ios.vendored_frameworks = 'SDK/WebRTC.xcframework'
+    s.ios.vendored_frameworks = 'SDK/MirrorflyWebrtc.xcframework'
     s.documentation_url = 'https://www.mirrorfly.com/docs/chat/ios/v2/quick-start/'
     s.pod_target_xcconfig = { 'VALID_ARCHS' => 'armv7 arm64 x86_64', 'IPHONEOS_DEPLOYMENT_TARGET' => '12.1',}
 end
