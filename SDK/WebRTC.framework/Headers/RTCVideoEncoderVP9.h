@@ -11,17 +11,15 @@
 #import <Foundation/Foundation.h>
 
 #import <WebRTC/RTCMacros.h>
-#import <WebRTC/RTCVideoEncoder.h>
+#import <WebRTC/RTCVideoCodec.h>
 
-RTC_OBJC_EXPORT
-@interface RTC_OBJC_TYPE (RTCVideoEncoderVP9) : NSObject
+RTC_EXPORT
+@interface RTCVideoEncoderVP9 : NSObject
 
 /* This returns a VP9 encoder that can be returned from a RTCVideoEncoderFactory injected into
  * RTCPeerConnectionFactory. Even though it implements the RTCVideoEncoder protocol, it can not be
  * used independently from the RTCPeerConnectionFactory.
  */
-+ (id<RTC_OBJC_TYPE(RTCVideoEncoder)>)vp9Encoder;
-
-+ (bool)isSupported;
++ (id<RTCVideoEncoder>)vp9Encoder;
 
 @end

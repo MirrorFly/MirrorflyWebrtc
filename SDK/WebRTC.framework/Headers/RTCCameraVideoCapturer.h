@@ -8,19 +8,18 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import <AVFoundation/AVFoundation.h>
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
 #import <WebRTC/RTCMacros.h>
 #import <WebRTC/RTCVideoCapturer.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-RTC_OBJC_EXPORT
-// Camera capture that implements RTCVideoCapturer. Delivers frames to a
-// RTCVideoCapturerDelegate (usually RTCVideoSource).
-NS_EXTENSION_UNAVAILABLE_IOS("Camera not available in app extensions.")
-@interface RTC_OBJC_TYPE (RTCCameraVideoCapturer) : RTC_OBJC_TYPE(RTCVideoCapturer)
+RTC_EXPORT
+// Camera capture that implements RTCVideoCapturer. Delivers frames to a RTCVideoCapturerDelegate
+// (usually RTCVideoSource).
+@interface RTCCameraVideoCapturer : RTCVideoCapturer
 
 // Capture session that is used for capturing. Valid from initialization to dealloc.
 @property(readonly, nonatomic) AVCaptureSession *captureSession;
@@ -40,9 +39,9 @@ NS_EXTENSION_UNAVAILABLE_IOS("Camera not available in app extensions.")
 - (void)startCaptureWithDevice:(AVCaptureDevice *)device
                         format:(AVCaptureDeviceFormat *)format
                            fps:(NSInteger)fps
-             completionHandler:(nullable void (^)(NSError *_Nullable))completionHandler;
+             completionHandler:(nullable void (^)(NSError *))completionHandler;
 // Stops the capture session asynchronously and notifies callback on completion.
-- (void)stopCaptureWithCompletionHandler:(nullable void (^)(void))completionHandler;
+- (void)stopCaptureWithCompletionHandler:(nullable void (^)())completionHandler;
 
 // Starts the capture session asynchronously.
 - (void)startCaptureWithDevice:(AVCaptureDevice *)device
