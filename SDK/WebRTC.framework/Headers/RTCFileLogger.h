@@ -33,8 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 // are preserved while the middle section is overwritten instead.
 // For kRTCFileLoggerTypeApp, the oldest log is overwritten.
 // This class is not threadsafe.
-RTC_EXPORT
-@interface RTCFileLogger : NSObject
+RTC_OBJC_EXPORT
+@interface RTC_OBJC_TYPE (RTCFileLogger) : NSObject
 
 // The severity level to capture. The default is kRTCFileLoggerSeverityInfo.
 @property(nonatomic, assign) RTCFileLoggerSeverity severity;
@@ -43,7 +43,7 @@ RTC_EXPORT
 // kRTCFileLoggerTypeCall.
 @property(nonatomic, readonly) RTCFileLoggerRotationType rotationType;
 
-// Disables buffering disk writes. Should be set before |start|. Buffering
+// Disables buffering disk writes. Should be set before `start`. Buffering
 // is enabled by default for performance.
 @property(nonatomic, assign) BOOL shouldDisableBuffering;
 
@@ -52,13 +52,11 @@ RTC_EXPORT
 - (instancetype)init;
 
 // Create file logger with default rotation type.
-- (instancetype)initWithDirPath:(NSString *)dirPath
-                    maxFileSize:(NSUInteger)maxFileSize;
+- (instancetype)initWithDirPath:(NSString *)dirPath maxFileSize:(NSUInteger)maxFileSize;
 
 - (instancetype)initWithDirPath:(NSString *)dirPath
                     maxFileSize:(NSUInteger)maxFileSize
-                   rotationType:(RTCFileLoggerRotationType)rotationType
-    NS_DESIGNATED_INITIALIZER;
+                   rotationType:(RTCFileLoggerRotationType)rotationType NS_DESIGNATED_INITIALIZER;
 
 // Starts writing WebRTC logs to disk if not already started. Overwrites any
 // existing file(s).
@@ -74,4 +72,3 @@ RTC_EXPORT
 @end
 
 NS_ASSUME_NONNULL_END
-
