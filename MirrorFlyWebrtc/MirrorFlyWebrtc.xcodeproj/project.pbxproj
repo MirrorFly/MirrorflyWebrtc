@@ -13,6 +13,7 @@
 /* Begin PBXFileReference section */
 		CEF9E2ED2B04EDAB00B1EF0C /* MirrorFlyWebrtc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MirrorFlyWebrtc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF9E2F02B04EDAB00B1EF0C /* MirrorFlyWebrtc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MirrorFlyWebrtc.h; sourceTree = "<group>"; };
+		CEF9E3072B0B634300B1EF0C /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = ../SDK/WebRTC.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +32,7 @@
 			children = (
 				CEF9E2EF2B04EDAB00B1EF0C /* MirrorFlyWebrtc */,
 				CEF9E2EE2B04EDAB00B1EF0C /* Products */,
+				CEF9E3062B0B634300B1EF0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,6 +50,14 @@
 				CEF9E2F02B04EDAB00B1EF0C /* MirrorFlyWebrtc.h */,
 			);
 			path = MirrorFlyWebrtc;
+			sourceTree = "<group>";
+		};
+		CEF9E3062B0B634300B1EF0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9E3072B0B634300B1EF0C /* WebRTC.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
