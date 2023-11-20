@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.ios.deployment_target = '12.1'
     s.ios.vendored_frameworks = "SDK/WebRTC.xcframework"
-    s.public_header_files = "supportFiles/Headers/**/*.h" 
+    s.public_header_files = "supportFiles/Headers/*.h" 
     s.source_files = 'supportFiles/Headers/**/*.h'
     s.documentation_url = 'https://www.mirrorfly.com/docs/chat/ios/v2/quick-start/'
     s.ios.frameworks = ['UIKit']
