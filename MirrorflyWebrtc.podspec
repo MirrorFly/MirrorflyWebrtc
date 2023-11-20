@@ -13,5 +13,6 @@ Pod::Spec.new do |s|
     s.ios.vendored_frameworks = "SDK/WebRTC.framework"
     s.public_header_files = "SDK/WebRTC.framework/Headers/**/*.h"
     s.documentation_url = 'https://www.mirrorfly.com/docs/chat/ios/v2/quick-start/'
+    s.ios.frameworks = ['UIKit']
     s.pod_target_xcconfig = { 'VALID_ARCHS' => 'armv7 arm64 x86_64', 'IPHONEOS_DEPLOYMENT_TARGET' => '12.1',}
 end
