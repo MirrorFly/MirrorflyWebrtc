@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name              = 'MirrorflyWebrtc'
-    s.version           = "1.1.7"
+    s.version           = "1.1.8"
     s.summary           = 'This repo is to access WebRTC framework and methods'
     s.homepage          = 'https://github.com/MirrorFly/MirrorflyWebrtc'
     s.author            = { 'Gowtham' => 'gowtham.a@contus.in','Vanitha' => 'vanitha.g@contus.in', }
