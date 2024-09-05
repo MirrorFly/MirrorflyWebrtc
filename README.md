@@ -1,8 +1,8 @@
-<p style="text-align: center;">
+<p align="center">
   <img  src="https://dasa7d6hxd0bp.cloudfront.net/images/mirrorfly.webp" data-canonical-src="https://dasa7d6hxd0bp.cloudfront.net/images/mirrorfly.webp" width="400"  alt=""/>
 </p>
 
-<h1 style="text-align: center">
+<h1 align="center">
   The 100% Customizable CPaaS Solution For Enterprise Communication
 </h1>
 
