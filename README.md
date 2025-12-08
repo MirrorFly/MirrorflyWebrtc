@@ -2,11 +2,11 @@
   <img  src="https://dasa7d6hxd0bp.cloudfront.net/images/mirrorfly.webp" data-canonical-src="https://dasa7d6hxd0bp.cloudfront.net/images/mirrorfly.webp" width="400"  alt=""/>
 </p>
 
-# **MirrorFly React Native SDK For Video Chat & Calls**
+*MirrorFly WebRTC SDK For Voice & Video Calls**
 
-Integrate Real-time Messaging, Audio & Video Calling into Android, and iOS apps with MirrorFly React Native SDK. 
+This repository includes a custom SDK for building voice and video calling features into your existing app or web. There are over 1000 real-time communication features along with 500+ AI-powered features to build AI chatbots and AI voice agents. 
 
-With support for RTMP and WebRTC, 1000+ communication features, 500+ AI-powered features, MirrorFly lets you build any app with complete customization and control over features and security. Above this, the solution gives full data sovereignty and deployment flexibility (on-premise/ on-cloud). 
+You can customize any part of the solution and deploy it on your own server. MirrorFly WebRTC SDK gives you full control over the security, data and infrastructure. Altogether you’ll only need minimal efforts to deploy a full AI-powered voice/ video calling app in 24 hrs with MirrorFly WebRTC SDK.
 
 # **🤹 Key Product Offerings** 
 
@@ -19,376 +19,291 @@ MirrorFly helps build omni-channel communication apps for any kind of business
 **🤖 [AI Chatbot](https://www.mirrorfly.com/conversational-ai/chatbot/)** \- Deploy white-label AI chatbots that drive autonomous conversations across any web or mobile app.  
 **🦾 [Live Streaming](https://www.mirrorfly.com/live-streaming-sdk.php)** \- Broadcast video content to millions of viewers around the world, within your own enterprise app. 
 
-### **⚒️React Native SDK For Android & iOS**
+[**Requirements**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#requirements)
 
-### [**Requirements**](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#requirements)
+The requirements for the Audio & Video Chat SDK for Android are:
 
-The requirements for chat SDK for React Native Mobile App are:
+* **Android**: Lollipop 5.0 (API Level 21) or higher  
+* **Java**: Version 7 or higher  
+* **Gradle**: 8.6.0 or higher  
+* **Kotlin:** 2.0.20 or higher  
+* **targetSdkVersion / compileSdkVersion:** 35 or above
 
-* React-Native \>= 0.73.0 \<=0.79.5  
-* Node Version \>= 18.20.4  
-* npm \- 10.7.0
+### [**Getting Started**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#things-to-be-noted-before-you-get-started)
 
-**iOS**
+**Step 1:** Register [here](https://www.mirrorfly.com/contact-sales.php) to get a MirrorFly User account.  
+**Step 2:** [Login](https://console.mirrorfly.com/) to your Account  
+**Step 3:** Get the License key from the application Info’ section
 
-To enable/disable New Architecture in Podfile:
+![license-key][image2]
 
-```txt
-ENV['RCT_NEW_ARCH_ENABLED'] = '0'  # Use '1' to enable, '0' to disable
-```
+### [**Video Call SDK Integration**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#integrate-the-video-calling-sdk-for-android-app-video-tutorial)
 
-**Android**
+**Step 1:** Create a new project or open an existing project in Android Studio.  
+**Step 2:**
 
-To enable/disable New Architecture in gradle.properties:
+* If using Gradle 6.8 or higher, add the following code to your `settings.gradle` file.  
+* If using Gradle 6.7 or lower, add the code to your root `build.gradle` file.
 
-```txt
-newArchEnabled=false  # Use 'true' to enable, 'false' to disable
-```
+![Jcenter][image3]
 
-### [**Getting Started**](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#things-to-be-noted-before-you-get-started)
-
-##### [**SDK License Key**](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#sdk-license-key)
-
-**Note:** Skip this part if you are already having your license key.
-
-You must obtain an SDK License Key to integrate the MirrorFly Chat SDK into your app. The MirrorFly server uses this key to authenticate your app’s SDK instance.
-
-##### [**To get the License Key**](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#to-get-the-license-key)**,**
-
-Step 1: Register [here](https://www.mirrorfly.com/contact-sales.php) to get a MirrorFly User account.  
-
-Step 2: [Login](https://console.mirrorfly.com/) to your Account  
-
-Step 3: Get the License key from the application Info’ section  
-
-<img  src="https://www.mirrorfly.com/docs/assets/images/license-key-a1173e922ebff14b6ae1a2428f822eec.png" data-canonical-src="https://www.mirrorfly.com/docs/assets/images/license-key-a1173e922ebff14b6ae1a2428f822eec.png" width="100%"  alt=""/>
-
-# **Real-time Chat Integration**
-
-## [Integrate the Chat SDK](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#integrate-the-chat-sdk)
-
-**Step 1:** Update all your packages.json files.
-
-**Step 2:** Check your package files for any duplicates if the app isn’t working on iOS.
-
-#### [**Integrate Using Npm package**](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#integrate-using-npm-package)
-
-Step 3: Install MirrorFly SDK in your React Native app.
-
-```bash
-npm i mirrorfly-reactnative-sdk@2.4.1
-```
-
-Step 4: Import the SDK into your application where you want
-
-```js
-import { SDK } from "mirrorfly-reactnative-sdk";
-```
-
-## [NPM Package Addition](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#adding-npm-package-dependencies-to-integrate-the-chat-sdk)
-
-```json
-{
-  "@react-native-community/netinfo": "^11.4.1",
-  "react-native-get-random-values": "1.11.0", //must use version >=1.7.1
-  "realm": "^20.1.0",
-  "react-native-fs": "^2.20.0",
-  "moment": "2.30.1",
-  //add the below calls related dependencies
-  "react-native-webrtc": "124.0.4",           // must use version "124.0.4"
-  "react-native-background-timer": "^2.4.1",
-  "react-native-permissions": "^5.2.1"
+```gradle
+dependencyResolutionManagement {
+    repositories {
+        jcenter()
+        maven {
+            url "https://repo.mirrorfly.com/release"
+        }
+    }
 }
 ```
 
-## [React Native Messaging SDK Initialization](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#initialize-the-react-native-messaging-sdk)
+**Step 3:** Add the following dependencies in the `app/build.gradle` file.
 
-Before you initialize the real-time React Native Chat SDK, make sure you have the data that tracks changes in the client app’s connection status.
-
-Paste your license key into the `licenseKey` parameter, then use the method below to pass this data to the SDK for processing.
-
-In your app file (e.g., App.tsx or App.js), import the SDK and call the `initializeSDK` function with the required parameters.
-
-```js
-const initializeObj = {
-  apiBaseUrl: `API_URL`,
-  licenseKey: `LICENSE_KEY`,
-  isTrialLicenseKey: `TRIAL_MODE`,
-  callbackListeners: {},
-};
-
-await SDK.initializeSDK(initializeObj);
-```
-
-### [**Sandbox Details**](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#sandbox-details)
-
-You can get the apiUrl and licenseKey details from the Overview section in the MirrorFly Console dashboard.
-
-![license-key][image3]
-
-```js
-function connectionListener(response) {
-  if (response.status === "CONNECTED") {
-    console.log("Connection Established");
-  } else if (response.status === "DISCONNECTED") {
-    console.log("Disconnected");
-  }
-}
-
-const initializeObj = {
-  apiBaseUrl: "https://api-preprod-sandbox.mirrorfly.com/api/v1",
-  licenseKey: "XXXXXXXXXXXXXXXXX",
-  isTrialLicenseKey: true,
-  callbackListeners: {
-    connectionListener,
-  },
-};
-
-await SDK.initializeSDK(initializeObj);
-```
-
-#### [**Example Response**](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#example-response)
-
-```json
-{
-  "statusCode": 200,
-  "message": "Success"
+```gradle
+dependencies {
+    implementation 'com.mirrorfly.sdk:mirrorflysdk:7.13.31'
 }
 ```
 
-### [**Device ID Module**](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#device-id-module)
+**Step 4**: Add the below line in the `gradle.properties` file, to avoid imported library conflicts.
 
-Download DeviceId Module files
-
-[Download](https://s3.ap-south-1.amazonaws.com/app.mirrorfly.com/rn_device_id_dependency.zip)
-
-**Step 1:** Download the Android files from the link above, locate the required files, and copy them into the `android/app/src/main/java/com` directory.
-
-**Step 2:** Download the iOS files from the link above, locate the required files, and add them to your project in Xcode using **Add Files to [Your Project]**. Then follow the steps below.
-
-## [Register User](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#register-user)
-
-**Step 1:** You can use the below given method to register a new user.
-
-**Step 2:** After you register, the system provides a username and password. Use these credentials to connect to the server through the [connect method](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#connect-to-mirrorfly-server).
-
-```js
-// "This method was deprecated and will be removed in the future release"
- await SDK.register(
-USER_IDENTIFIER,
-FCE_TOKEN,
-VOIP_DEVICE_TOKEN,
-MODE,
-REGISTER_META_DATA,
-FORCE_REGISTER
-);
-
-// "The above method is migrated as below"
-const registerObject = {
-  userIdentifier,
-  fcmtoken,
-  voipDeviceToken,
-  mode,
-  registerMetaData,
-  forceRegister,
-};
-
-await SDK.register(registerObject);
+```properties
+android.enableJetifier=true
 ```
 
-#### [**Sample Response:**](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#sample-response)
+**Step 5**: Add required runtime permissions for calls [click here](https://www.mirrorfly.com/docs/audio-video/android/v2/android-permissions)
 
-```json
-{
-  "statusCode": 200,
-  "message": "Success",
-  "data": {
-    "username": "123456789",
-    "password": "987654321"
-  }
+## [**Initialize SDK For Calls**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#initialize-sdk-for-calls)
+
+Before using the SDK, ensure the basic requirements are met. In your `Application` class, within the `onCreate()` method, use the following `ChatManager` method to provide the necessary initialization data:
+
+![configscyAar][image4]
+
+```java
+ChatManager.initializeSDK("LICENSE_KEY", (isSuccess, throwable, data) -> {
+    if (isSuccess) {
+        Log.d("TAG", "initializeSDK success ");
+    } else {
+        Log.d("TAG", "initializeSDK failed with reason " + data.get("message"));
+    }
+});
+```
+
+### [**Add MyApplication**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#add-myapplication)
+
+Add the created `MyApplication` to `AndroidManifest.xml`.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.uikitapplication">
+    <application
+        android:name=".MyApplication"  // Add this line.
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                ...
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
+```
+
+## [**Registration**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#registration)
+
+The following method registers a user in sandbox or live mode based on the `setIsTrialLicenceKey` setting.
+
+```java
+FlyCore.registerUser(USER_IDENTIFIER, (isSuccess, throwable, data) -> {
+    if (isSuccess) {
+        Boolean isNewUser = (Boolean) data.get("is_new_user");  // true - if the current user is different from the previous session's logged-in user, false - if the same user is logging in again
+        String userJid = (String) data.get("userJid"); //Ex. 12345678@xmpp-preprod-sandbox.mirrorfly.com (USER_IDENTIFIER+@+domain of the chat server)
+        JSONObject responseObject = (JSONObject) data.get("data");
+        String username = responseObject.getString("username");
+    } else {
+        // Register user failed print throwable to find the exception details.
+    }
+});
+```
+
+## [**Connect to the Chat Server**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#connect-to-the-chat-server)
+
+Once registration is successful, the Chat SDK automatically attempts to connect to the chat server. It also observes application lifecycle changes and connects or disconnects from the chat server accordingly.
+
+## [**Observe Connection Events**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#observe-connection-events)
+
+Once the `ChatConnectionListener` is set, you can receive connection status updates through the callback method shown below.
+
+```java
+ChatManager.setConnectionListener(new ChatConnectionListener() {
+    @Override
+    public void onConnected() {
+        // Write your success logic here to navigate Profile Page or
+        // To Start your one-one chat with your friends
+    }
+
+    @Override
+    public void onDisconnected() {
+        // Connection disconnected
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull FlyException e) {
+        // Connection Not authorized or Unable to establish connection with server
+    }
+
+    @Override
+    public void onReconnecting() {
+        // Automatic reconnection enabled
+    }
+});
+```
+
+## [**Initialize Call SDK**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#initialize-call-sdk)
+
+In your `Application` class, inside the `onCreate()` method add the below lines:
+
+```java
+@Override
+public void onCreate() {
+    super.onCreate();
+
+    //set your call activity
+    CallManager.setCallActivityClass(CALL_UI_ACTIVITY.class);
+
+    CallManager.setMissedCallListener((isOneToOneCall, userJid, groupId, callType, userList, CallMetaData[] callMetaDataArray) -> {
+        //show missed call notification
+    });
+
+    CallManager.setCallHelper(new CallHelper() {
+        @NonNull
+        @Override
+        public String getNotificationContent(@NonNull String callDirection, CallMetaData[] callMetaDataArray) {
+            return CallNotificationHelper.getNotificationMessage();
+        }
+    });
+
+    CallManager.setCallNameHelper(new CallNameHelper() {
+        @NonNull
+        @Override
+        public String getDisplayName(@NonNull String jid, CallMetaData[] callMetaDataArray) {
+            return ContactManager.getDisplayName(jid);
+        }
+    });
 }
 ```
 
-## [Connect to MirrorFly Server](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#connect-to-mirrorfly-server)
+## [**Setup your call activity**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#setup-your-call-activity)
 
-**Step 1:** Use the credentials you received during [registration](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#register-user) to establish a connection with the server.
+Define your Call UI activity in the `AndroidManifest.xml` as shown below.  
+In your call activity’s `onCreate()` method, call the following method to configure the call activity.
 
-**Step 2:** After you establish the connection successfully, the server returns a statusCode of 200. If the connection fails, you receive an execution error instead.
-
-**Step 3:** You can also track the connection status through the [connectionListener](https://www.mirrorfly.com/docs/chat/reactnative/callback-listeners#connection-listener) callback function.
-
-**Step 4:** If the server connection fails, the callback returns an error message.
-
-```js
-await SDK.connect(`USERNAME`, `PASSWORD`);
+```xml
+<activity
+    android:name="YOUR_CALL_ACTIVITY"
+    android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+    android:excludeFromRecents="true"
+    android:launchMode="singleTask"
+    android:resizeableActivity="false"
+    android:screenOrientation="portrait"
+    android:supportsPictureInPicture="true"
+    android:showOnLockScreen="true"
+    android:turnScreenOn="true"
+    android:taskAffinity="call.video"
+    tools:targetApi="o_mr1" />
 ```
 
-#### [**Sample Response:**](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#sample-response-1)
+To remove the ongoing call notification, call the following method in your call activity’s `onStart()` to notify the audio and video calling SDK.
 
-```json
-{
-  "message": "Login Success",
-  "statusCode": 200
-}
+```java
+CallManager.configureCallActivity(ACTIVITY);
 ```
 
-## [Send a Message](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#send-a-message)
+Call the following method in your call activity’s `onStop()` to notify the Call SDK to display the ongoing call notification.
 
-Finally, to send a message to another user you can use the below given method,
-
-```js
-await SDK.sendTextMessage(
-  `TO_USER_JID`,
-  `MESSAGE_BODY`,
-  `MESSAGE_ID`,
-  `REPLY_TO`
-);
+```java
+CallManager.bindCallService();
 ```
 
-#### [**Response Format:**](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#response-format)
-
-```json
-{
-  "message": "",   // String - Success/Error Message
-  "statusCode": "" // Number - status code
-}
+```java
+CallManager.unbindCallService();
 ```
 
-## [Receive a Message](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#receive-a-message)
+### [**Preparing user jid**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#preparing-user-jid)
 
-To receive messages from another user, implement the `messageListener` function. This function triggers whenever you receive a new message or a related event in one-to-one or group chats. When [initializing the SDK](https://www.mirrorfly.com/docs/chat/reactnative/quick-start#initialize-chat-sdk), add the callback method below as part of the setup.
+To generate a JID for any user, use the below method.
 
-```js
-function messageListener(response) {
-  console.log("Message Listener", response);
-}
+```java
+FlyUtils.getJid(USER_NAME);
 ```
 
-# **Voice & Video Calling Integration**
+## [**Make a call**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#make-a-call)
 
-**Note:** Before making the call, make sure you have implemented the [helper](https://www.mirrorfly.com/docs/audio-video/reactnative/callback-listeners#helper-object) object.
+To send custom data when making a call, use the optional `metaData` parameter in all `makeCall` methods. This parameter accepts an array of type `CallMetadata`.
 
-## [Make a voice call](https://www.mirrorfly.com/docs/audio-video/reactnative/making-a-call#make-a-voice-call)
+### [**Make a voice call**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#make-a-voice-call)
 
-You can initiate a voice call by passing the callee’s user JID into the `makeVoiceCall` method. Once the call is successfully initiated, the [callStatusListener](https://www.mirrorfly.com/docs/audio-video/reactnative/callback-listeners#call-status-listener) callback will be triggered, providing updates on the callee’s call status.
+The voice call feature allows users to make a one-to-one audio call with another SDK user, including optional call metadata. Use the following method to initiate a voice call:
 
-**Note:** If one- to-one call feature is unavailable for your plan, then it will throw 403 exception
-
-```js
-await SDK.makeVoiceCall(['USER1_JID']);
+```java
+CallManager.makeVoiceCall("TO_JID", CALL_METADATA, (isSuccess, flyException) -> {
+    if (isSuccess) {
+        //SDK will take care of presenting the Call UI. It will present the activity that is passed using the method `CallManager.setCallActivityClass()`
+        Log.d("MakeCall", "call success");
+    } else {
+        if (flyException != null) {
+            String errorMessage = flyException.getMessage();
+            Log.d("MakeCall", "Call failed with error: " + errorMessage);
+            //toast error message
+        }
+    }
+});
 ```
 
-#### [**Response Format**](https://www.mirrorfly.com/docs/audio-video/reactnative/making-a-call#response-format)
+## [**Receive a call**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#receive-a-call)
 
-```json
-{
-  "statusCode": 200, // Number - status code
-  "message": "",     // String - Success/Error Message
-  "callType": "",    // String - Call Type - "audio"
-  "roomId": ""       // String - Unique room ID
-}
+When you receive an audio call from another SDK user, the Call SDK will display a notification if the device is running Android 10 (API level 29) or higher. On lower Android versions, the activity set via `CallManager.setCallActivityClass()` during SDK initialization will launch with the call details. A sample call UI is provided for quick integration.
+
+[**Answer the call**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#answer-the-call)
+
+When you receive an audio call from another SDK user, your activity may be launched depending on the Android version. When the user presses the accept button in your call UI, call the following SDK method to answer the call and notify the caller.
+
+**Note:** If the required permissions are not granted, the call will be automatically declined even if the user attempts to answer it.
+
+```java
+CallManager.answerCall((isSuccess, flyException) -> {
+    if (isSuccess) {
+        Log.d("AnswerCall", "call answered success");
+    } else {
+        if (flyException != null) {
+            String errorMessage = flyException.getMessage();
+            Log.d("AnswerCall", "Call answered failed with error: " + errorMessage);
+            //toast error message
+        }
+    }
+});
 ```
 
-### [**Make a video call**](https://www.mirrorfly.com/docs/audio-video/reactnative/making-a-call#make-a-video-call)
+### [**Decline the call**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#decline-the-call)
 
-Initiate a call by passing the callee’s user JID to the `makeVideoCall` method. After the call is successfully initiated, the `callStatusListener` callback will be triggered, providing the callee’s call status.
+When you receive an audio call from another SDK user, your activity may be launched depending on the Android version. When the user presses the decline button in your call UI, call the following SDK method to decline the call and notify the caller.
 
-**Caution:** If the one-to-one call feature is not available for your plan, the method will throw a 403 exception.
-
-```js
-await SDK.makeVideoCall(['USER1_JID']);
+```java
+CallManager.declineCall();
 ```
 
-#### **Response Format**  
-(https://www.mirrorfly.com/docs/audio-video/reactnative/making-a-call#response-format-1)
+## [**Disconnect the ongoing call**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#disconnect-the-ongoing-call)
 
-```json
-{
-  "statusCode": 200, // Number - status code
-  "message": "",     // String - Success/Error Message
-  "callType": "",    // String - Call Type - "video"
-  "roomId": ""       // String - Unique room ID
-}
-```
+Whenever you make an audio call to another SDK user and want to disconnect either before the call connects or after the conversation ends, call the following SDK method when the user presses the disconnect button in your call UI. This will end the call and notify the other participant.
 
-#### [**Response Params**](https://www.mirrorfly.com/docs/audio-video/reactnative/making-a-call#response-params-1)
-
-To receive the user track, ensure that a [userTrackListener](https://www.mirrorfly.com/docs/audio-video/reactnative/callback-listeners#user-track-listener) callback is already registered in the caller’s client app. When you initiate a call, this callback will return both your track and the callee’s track. Use the `localUser` and `userJid` parameters to differentiate between users. Both audio and video tracks are provided in the same callback. Pass the received track object to the corresponding audio or video element based on its type.
-
-## [Receive incoming call](https://www.mirrorfly.com/docs/audio-video/reactnative/making-a-call#receive-incoming-call)
-
-To receive incoming calls, register the [incomingCallListener](https://www.mirrorfly.com/docs/audio-video/reactnative/callback-listeners#incoming-call-listener) callback in the callee’s client app. When a user makes a call, the callee receives the call data through this callback.
-
-```js
-// Callback Response Argument Structure
-{
-  allUsers: ["USER1_JID", "USER2_JID"],
-  callMode: "onetoone",
-  callTime: 1681905421215,
-  callType: "audio|video",
-  from: "USER_JID|FROM_USER_JID",
-  groupId: null,
-  localUser: BOOLEAN,
-  roomId: "wmupbheao",
-  roomLink: "ndy-bmkb-eui",
-  status: "calling",
-  to: "FROM_USER_JID",
-  toUsers: ["USER_JID"],
-  userDetails: {},
-  userJid: "FROM_USER_JID",
-  usersStatus: [{}]
-}
-```
-
-### [**Answer a call**](https://www.mirrorfly.com/docs/audio-video/reactnative/making-a-call#answer-a-call)
-
-To answer a call use the `answerCall` method.
-
-```js
-await SDK.answerCall();
-```
-
-#### [**Response Format**](https://www.mirrorfly.com/docs/audio-video/reactnative/making-a-call#response-format-2)
-
-```json
-{
-  "statusCode": 200, // Number - status code
-  "message": ""      // String - Success/Error Message
-}
-```
-
-### [**End a call**](https://www.mirrorfly.com/docs/audio-video/reactnative/making-a-call#end-a-call)
-
-To end a call use the `endCall` method.
-
-```js
-await SDK.endCall();
-```
-
-#### [**Response Format**](https://www.mirrorfly.com/docs/audio-video/reactnative/making-a-call#response-format-3)
-
-```json
-{
-  "statusCode": 200, // Number - status code
-  "message": ""      // String - Success/Error Message
-}
-```
-
-### [**Decline a call**](https://www.mirrorfly.com/docs/audio-video/reactnative/making-a-call#decline-a-call)
-
-Use the `declineCall` method to decline any incoming call
-
-```js
-await SDK.declineCall();
-```
-
-#### [**Response Format**](https://www.mirrorfly.com/docs/audio-video/reactnative/making-a-call#response-format-4)
-
-```json
-{
-  "statusCode": 200, // Number - status code
-  "message": ""      // String - Success/Error Message
-}
+```java
+CallManager.disconnectCall();
 ```
 
 # **☁️ Deployment Models \- Self-hosted and Cloud**
@@ -401,20 +316,18 @@ MirrorFly offers full freedom with the hosting options:
 
 # **📱 Mobile Client**
 
-MirrorFly offers a fully-built client SafeTalk that is available in:
-- iOS
-- Android
-
-
+MirrorFly offers a fully-built client **SafeTalk** that is available in:  
+![Rocket.Chat on Apple App Store][image5] ![Rocket.Chat on Google Play][image6]   
 You can use this client as a messaging app, or customize, rebrand & white-label it as your chat client. 
 
 # **📚 Learn More**
 
-* [Developer Documentation](https://www.mirrorfly.com/docs/chat/reactnative/quick-start/): MirrorFly React Native  
-* [MirrorFly React Native](https://www.mirrorfly.com/react-native-chat-sdk.php) Solution   
-* [MirrorFly React Native Sample App](https://github.com/MirrorFly/MirrorFly-ReactNative-Sample)  
-* [MirrorFly React Native UI Kit](https://www.mirrorfly.com/docs/uikit/web/quick-start/)  
+* [Developer Documentation](https://www.mirrorfly.com/docs/)  
 * [Product Tutorials](https://www.mirrorfly.com/tutorials/)  
+* [Dart Documentation](https://pub.dev/packages/mirrorfly_plugin)  
+* [Pubdev Documentation](https://pub.dev/packages/mirrorfly_plugin)  
+* [Npmjs Documentation](https://www.npmjs.com/~contus)  
+* [On-premise Deployment](https://www.mirrorfly.com/on-premises-chat-server.php)   
 * [See who's using MirrorFly](https://www.mirrorfly.com/chat-use-cases.php)
 
 # **🧑‍💻 Hire Experts**
@@ -437,4 +350,3 @@ We're always on the lookout for talented developers, support specialists, and pr
 * [LinkedIn](https://www.linkedin.com/showcase/mirrorfly-official/)  
 * [Youtube](https://www.youtube.com/@mirrorflyofficial)  
 * [Instagram](https://www.instagram.com/mirrorflyofficial/)
-
