@@ -4,26 +4,26 @@
 
 Enable browser-based video calling and voice communication in your web application with this WebRTC SDK integration guide. MirrorFly's customizable white-label solution delivers pre-built WebRTC functionality with straightforward client-side implementation and extensive configuration options. This readme details required libraries, dependency management, supplementary capabilities, and step-by-step setup instructions.
 
-# **Key Product Offerings** 
+# **Key Product Offerings**
 
 MirrorFly helps build omni-channel communication apps for any kind of business
 
-* [**In-app Messaging**](https://www.mirrorfly.com/chat-api-solution.php) - Connect users individually or as groups via instant messaging features.  
-* [**HD Video Calling**](https://www.mirrorfly.com/video-call-solution.php) - Engage users over face-to-face conversations anytime, and from anywhere.   
-* [**HQ Voice Calling**](https://www.mirrorfly.com/voice-call-solution.php) - Deliver crystal clear audio calling experiences with latency as low as 3ms.   
-* [**AI Voice Agent**](https://www.mirrorfly.com/conversational-ai/voice-agent/) - Build custom AI voicebots that can understand, act and respond to user questions.   
-* [**AI Chatbot**](https://www.mirrorfly.com/conversational-ai/chatbot/) - Deploy white-label AI chatbots that drive autonomous conversations across any web or mobile app.  
-* [**Live Streaming**](https://www.mirrorfly.com/live-streaming-sdk.php) - Broadcast video content to millions of viewers around the world, within your own enterprise app. 
+- [**In-app Messaging**](https://www.mirrorfly.com/chat-api-solution.php) - Connect users individually or as groups via instant messaging features.
+- [**HD Video Calling**](https://www.mirrorfly.com/video-call-solution.php) - Engage users over face-to-face conversations anytime, and from anywhere.
+- [**HQ Voice Calling**](https://www.mirrorfly.com/voice-call-solution.php) - Deliver crystal clear audio calling experiences with latency as low as 3ms.
+- [**AI Voice Agent**](https://www.mirrorfly.com/conversational-ai/voice-agent/) - Build custom AI voicebots that can understand, act and respond to user questions.
+- [**AI Chatbot**](https://www.mirrorfly.com/conversational-ai/chatbot/) - Deploy white-label AI chatbots that drive autonomous conversations across any web or mobile app.
+- [**Live Streaming**](https://www.mirrorfly.com/live-streaming-sdk.php) - Broadcast video content to millions of viewers around the world, within your own enterprise app.
 
 [**Requirements**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#requirements)
 
 The requirements for the Audio & Video Chat SDK for Android are:
 
-* **Android**: Lollipop 5.0 (API Level 21) or higher  
-* **Java**: Version 7 or higher  
-* **Gradle**: 8.6.0 or higher  
-* **Kotlin:** 2.0.20 or higher  
-* **targetSdkVersion / compileSdkVersion:** 35 or above
+- **Android**: Lollipop 5.0 (API Level 21) or higher
+- **Java**: Version 7 or higher
+- **Gradle**: 8.6.0 or higher
+- **Kotlin:** 2.0.20 or higher
+- **targetSdkVersion / compileSdkVersion:** 35 or above
 
 ### [**Getting Started**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#things-to-be-noted-before-you-get-started)
 
@@ -39,8 +39,8 @@ The requirements for the Audio & Video Chat SDK for Android are:
 
 **Step 2:**
 
-* For Gradle 6.8 or higher, add the following code to your settings.gradle file.  
-* For Gradle 6.7 or lower, add the code to your root build.gradle file.
+- For Gradle 6.8 or higher, add the following code to your settings.gradle file.
+- For Gradle 6.7 or lower, add the code to your root build.gradle file.
 
 ```gradle
 dependencyResolutionManagement {
@@ -237,7 +237,6 @@ CallManager.declineCall();
 CallManager.disconnectCall();
 ```
 
-
 ## Deployment Models
 
 - **Self-hosted** – Deploy your client on your own data centers, private cloud or third-party servers.
@@ -284,5 +283,3 @@ Visit our careers page: [https://www.mirrorfly.com/careers](https://www.mirrorfl
 - [LinkedIn](https://www.linkedin.com/company/mirrorfly)
 - [YouTube](https://www.youtube.com/@mirrorfly)
 - [Instagram](https://www.instagram.com/mirrorfly)
-
-
