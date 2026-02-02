@@ -31,7 +31,7 @@ The requirements for the Audio & Video Chat SDK for Android are:
 **Step 2:** [Login](https://console.mirrorfly.com/) to your Account  
 **Step 3:** Get the License key from the application Info’ section
 
-![MirrorFly License Key](https://www.mirrorfly.com/docs/assets/images/license-key-a1173e922ebff14b6ae1a2428f822eec.png)
+![license-key][image1]
 
 ### [**Video Call SDK Integration**](https://www.mirrorfly.com/docs/audio-video/android/v2/quick-start/#integrate-the-video-calling-sdk-for-android-app-video-tutorial)
 
